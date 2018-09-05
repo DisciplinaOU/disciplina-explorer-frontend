@@ -65,10 +65,6 @@
     "blockHash": "Block hash",
     "size": "Size (bytes)",
     "newerBlocks": "To first page",
-    "pagenav" : {
-      "page" : "Page",
-      "of" : "of"
-    },
     "olderBlocks": "Older blocks"
   },
   "notFound": {
