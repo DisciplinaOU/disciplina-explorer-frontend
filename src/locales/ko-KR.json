@@ -64,7 +64,7 @@
     "blockLeader": "슬롯 리더",
     "blockHash": "블록 해시",
     "size": "사이즈 (바이트)",
-    "newerBlocks": "첫 페이지로 가기",
+    "newerBlocks": "신 블록",
     "olderBlocks": "구 블록"
   },
   "notFound": {
