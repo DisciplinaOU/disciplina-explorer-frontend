@@ -19,7 +19,8 @@ import store from './store/index'
 import './assets/css/index.scss'
 
 Vue.use(VueAxios, axios)
-const apiBaseUrl = process.env.WITNESS_API_URL || 'https://witness.disciplina.io'
+const apiBaseUrl = 'WITNESS_API_URL' in process.env
+      ? process.env.WITNESS_API_URL : 'https://witness.disciplina.io'
 Vue.axios.defaults.baseURL = apiBaseUrl + '/api/witness/v1'
 Vue.axios.defaults.headers.common['Content-Type'] = 'application/json'
 

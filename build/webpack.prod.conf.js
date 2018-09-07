@@ -15,7 +15,7 @@ const env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
   : require('../config/prod.env')
 
-env.WITNESS_API_URL = process.env.WITNESS_API_URL ? '"' + process.env.WITNESS_API_URL + '"' : env.WITNESS_API_URL;
+env.WITNESS_API_URL = 'WITNESS_API_URL' in process.env ? '"' + process.env.WITNESS_API_URL + '"' : env.WITNESS_API_URL;
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {

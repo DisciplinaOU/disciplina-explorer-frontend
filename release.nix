@@ -1,4 +1,4 @@
-{ stdenv, witnessUrl ? "", yarn, parallel, brotli }:
+{ stdenv, witnessUrl ? null, yarn, parallel, brotli }:
 stdenv.mkDerivation {
   name = "disciplina-witness-frontend";
   src = stdenv.lib.cleanSource ./.;
