@@ -1,7 +1,7 @@
 { stdenv, witnessUrl ? null, yarn, parallel, brotli }:
-stdenv.mkDerivation {
+stdenv.mkDerivation rec {
   name = "disciplina-witness-frontend";
-  src = stdenv.lib.cleanSource ./.;
+  src = builtins.path { path = ./.; inherit name; filter = stdenv.lib.cleanSourceFilter; };
   WITNESS_API_URL = witnessUrl;
   HOME = ".";
 
