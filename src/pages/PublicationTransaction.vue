@@ -11,11 +11,11 @@
           <div class="transactionInformBlock__fromTo">
             <div class="transactionInformBlock__from informBlock">
               <p class="informBlock__title">Educator</p>
-              <p class="informBlock__hash hash">{{ publicationTransaction.publication.author }}</p>
+              <p class="informBlock__hash hash">{{ publicationTransaction.author }}</p>
             </div>
             <div class="transactionInformBlock__to informBlock">
               <p class="informBlock__title">Update</p>
-              <p class="informBlock__hash hash">{{ publicationTransaction.publication.block }}</p>
+              <p class="informBlock__hash hash">{{ publicationTransaction.block }}</p>
             </div>
           </div>
         </div>
