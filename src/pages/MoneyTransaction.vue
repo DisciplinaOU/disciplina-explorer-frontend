@@ -13,14 +13,14 @@
                   <div class="transactionInformBlock__fromTo">
                       <div class="transactionInformBlock__from informBlock">
                           <p class="informBlock__title">{{ $t("from") }}</p>
-                          <router-link :to="{ name: 'addressShow', params: {hash: moneyTransaction.money.inAcc.addr} }" class="informBlock__hash hash">{{ moneyTransaction.money.inAcc.addr }}</router-link>
+                          <router-link :to="{ name: 'addressShow', params: {hash: moneyTransaction.inAcc.addr} }" class="informBlock__hash hash">{{ moneyTransaction.inAcc.addr }}</router-link>
                       </div>
                       <div class="transactionInformBlock__to informBlock">
                           <p class="informBlock__title">{{ $t("to") }}</p>
                           <div class="transactionInformBlock">
                           <router-link class="informBlock__hash hash"
                             :to="{ name: 'addressShow', params: {hash: addr.outAddr} }"
-                            v-for="addr in moneyTransaction.money.outs"
+                            v-for="addr in moneyTransaction.outs"
                             :key="addr.outAddr">
                             {{ addr.outAddr }}
                           </router-link>

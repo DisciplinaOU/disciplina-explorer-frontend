@@ -15,10 +15,10 @@
       <div class="transactionInformBlock__from informBlock">
         <p class="informBlock__title">{{ $t("transaction.from") }}</p>
         <router-link
-          :to="{ name: 'addressShow', params: {hash: transaction.money.inAcc.addr} }"
-          :class="{fat: isCurrent(transaction.money.inAcc.addr) }"
+          :to="{ name: 'addressShow', params: {hash: transaction.inAcc.addr} }"
+          :class="{fat: isCurrent(transaction.inAcc.addr) }"
           class="informBlock__hash hash">
-          {{ transaction.money.inAcc.addr }}
+          {{ transaction.inAcc.addr }}
         </router-link>
       </div>
       <div class="transactionInformBlock__to informBlock">
@@ -26,7 +26,7 @@
         <router-link class="informBlock__hash hash"
           :class="{fat: isCurrent(addr.outAddr) }"
           :to="{ name: 'addressShow', params: {hash: addr.outAddr} }"
-          v-for="addr in transaction.money.outs"
+          v-for="addr in transaction.outs"
           :key="addr.outAddr">
           {{ addr.outAddr }}
         </router-link >
