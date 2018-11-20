@@ -1,9 +1,5 @@
-let
-  nixpkgs = fetchGit {
-    url = "https://github.com/serokell/nixpkgs";
-    ref = "20180911.173158";
-    rev = "4089219f345ce7bd0c3bd579d9190e526ea50b52";
-  };
-in
-
-import nixpkgs {}
+import (fetchGit {
+  url = https://github.com/serokell/serokell-closure;
+  rev = "9749fb9c9344ffc7a15b38f351085fae3ac42de7";
+  ref = "20181120161835";
+})
